@@ -1,6 +1,6 @@
 # sentient-vehicle
 
-Controlling a vehicle using brain waves
+##Controlling a vehicle using brain waves
 
 High level:
 
