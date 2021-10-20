@@ -38,7 +38,7 @@ Prototype design:
 3. Migrate all systems onto onboard computer 
 
 Tasks:
-- ~~Write git 
+- ~~Write git~~
 - Review BCI EEG data
 - Review models
 - Set up a simulation and select robot
