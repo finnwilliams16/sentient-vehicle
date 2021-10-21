@@ -48,5 +48,37 @@ Tasks:
 - Research which controls to use, and the relationship between thoughts and actions
 
 ## ROS steps:
+# Setting up environment
 1. Created a new workspace; $ catkin_create_pkg sentient_vehicle rospy
-2. 
+2. Found out ros version with $ rosversion -d
+3. Following commands fix security bug: https://answers.ros.org/question/325039/apt-update-fails-cannot-install-pkgs-key-not-working/
+4. Ran $ sudo apt-key del 421C365BD9FF1F717815A3895523BAEEB01FA116
+5. Ran $ sudo -E apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+6. Ran $ sudo apt clean && sudo apt update
+7. Ran $ sudo apt install
+8. Ran $ sudo apt-get update
+9. Ran $ sudo apt update
+10. Ran following commands from https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/:
+
+$ sudo apt-get install ros-melodic-joy ros-melodic-teleop-twist-joy \
+  ros-melodic-teleop-twist-keyboard ros-melodic-laser-proc \
+  ros-melodic-rgbd-launch ros-melodic-depthimage-to-laserscan \
+  ros-melodic-rosserial-arduino ros-melodic-rosserial-python \
+  ros-melodic-rosserial-server ros-melodic-rosserial-client \
+  ros-melodic-rosserial-msgs ros-melodic-amcl ros-melodic-map-server \
+  ros-melodic-move-base ros-melodic-urdf ros-melodic-xacro \
+  ros-melodic-compressed-image-transport ros-melodic-rqt* \
+  ros-melodic-gmapping ros-melodic-navigation ros-melodic-interactive-markers
+
+$ sudo apt-get install ros-melodic-dynamixel-sdk
+
+$ sudo apt-get install ros-melodic-turtlebot3-msgs
+
+$ sudo apt-get install ros-melodic-turtlebot3
+
+$ export TURTLEBOT3_MODEL=waffle_pi
+
+$ echo "export TURTLEBOT3_MODEL=waffle_pi" >> ~/.bashrc
+
+11. Tested with $ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+
