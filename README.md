@@ -80,5 +80,7 @@ $ export TURTLEBOT3_MODEL=waffle_pi
 
 $ echo "export TURTLEBOT3_MODEL=waffle_pi" >> ~/.bashrc
 
-11. Tested with $ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+11. Tested with:
+$ roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
+$ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 
