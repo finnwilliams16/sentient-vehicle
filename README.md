@@ -46,3 +46,7 @@ Tasks:
 - Implement basic robot behaviours 
 - Run inference on model by sampling from the EEG distribution
 - Research which controls to use, and the relationship between thoughts and actions
+
+## ROS steps:
+1. Created a new workspace; $ catkin_create_pkg sentient_vehicle rospy
+2. 
