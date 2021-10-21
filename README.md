@@ -81,6 +81,19 @@ $ export TURTLEBOT3_MODEL=waffle_pi
 $ echo "export TURTLEBOT3_MODEL=waffle_pi" >> ~/.bashrc
 
 11. Tested with:
+
 $ roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
+
 $ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+
+
+TODO:
+
+Solve issue:
+
+RLException: [turtlebot3_empty_world.launch] is neither a launch file in package [turtlebot3_gazebo] nor is [turtlebot3_gazebo] a launch file name
+The traceback for the exception was written to the log file
+
+
+Run tests above and get teleops working
 
