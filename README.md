@@ -76,6 +76,14 @@ $ sudo apt-get install ros-melodic-turtlebot3-msgs
 
 $ sudo apt-get install ros-melodic-turtlebot3
 
+$ sudo apt install ros-melodic-joy ros-melodic-teleop-twist-joy
+
+$ sudo apt install ros-melodic-turtlebot3-msgs
+
+$ sudo apt install ros-melodic-dynamixel-sdk
+
+(inside src) $ git clone -b melodic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+
 $ export TURTLEBOT3_MODEL=waffle_pi
 
 $ echo "export TURTLEBOT3_MODEL=waffle_pi" >> ~/.bashrc
@@ -99,6 +107,8 @@ The traceback for the exception was written to the log file
 Where do i clone the turtlebot_3 packages? need help setting this up
 
 See chrome tab for vid
+
+Clearly the folder structure is incorrect so start again
 
 
 Run tests above and get teleops working
