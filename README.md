@@ -114,3 +114,34 @@ Clearly the folder structure is incorrect so start again
 Run tests above and get teleops working
 
 13. Created action folder and launch folder within work space
+
+
+
+sudo apt-get install ros-melodic-catkin
+
+source /opt/ros/melodic/setup.bash
+
+mkdir -p ~/catkin_ws/src
+
+cd ~/catkin_ws/
+
+catkin_make
+
+source devel/setup.bash
+
+All projects go inside catkin_ws/src and contain their own src folder
+
+catkin_create_pkg sentient_vehicle std_msgs rospy roscpp
+
+git clone -b melodic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+
+catkin_make in catkin_ws
+
+export TURTLEBOT3_MODEL=waffle_pi
+
+roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
+
+Must run every time:
+$ cd ~/catkin_ws/
+$ catkin_make
+$ source devel/setup.bash
