@@ -128,3 +128,16 @@ Task 5 - how i created an action server:
 - Create launch file in launch folder
 - Copy and paste launch code into there
 - Make sure launch file points to server and client
+
+
+
+Action client sends:
+- goal; sendGoal(), sendGoalAndWait()
+- cancel goal
+- cancel all goals
+
+Action server sends:
+- state
+- status
+- feedback 
+- result
