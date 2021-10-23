@@ -41,81 +41,27 @@ Tasks:
 - ~~Write git~~
 - Review BCI EEG data
 - Review models
-- Set up a simulation and select robot
+- ~~Set up a simulation and select robot~~
 - Write ROS subsystem completely
 - Implement basic robot behaviours 
 - Run inference on model by sampling from the EEG distribution
 - Research which controls to use, and the relationship between thoughts and actions
 
-## ROS steps:
-# Setting up environment
-1. Created a new workspace; $ catkin_create_pkg sentient_vehicle rospy
-2. Found out ros version with $ rosversion -d
-3. Following commands fix security bug: https://answers.ros.org/question/325039/apt-update-fails-cannot-install-pkgs-key-not-working/
-4. Ran $ sudo apt-key del 421C365BD9FF1F717815A3895523BAEEB01FA116
-5. Ran $ sudo -E apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
-6. Ran $ sudo apt clean && sudo apt update
-7. Ran $ sudo apt install
-8. Ran $ sudo apt-get update
-9. Ran $ sudo apt update
-10. Ran following commands from https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/:
+## ROS:
 
-$ sudo apt-get install ros-melodic-joy ros-melodic-teleop-twist-joy \
-  ros-melodic-teleop-twist-keyboard ros-melodic-laser-proc \
-  ros-melodic-rgbd-launch ros-melodic-depthimage-to-laserscan \
-  ros-melodic-rosserial-arduino ros-melodic-rosserial-python \
-  ros-melodic-rosserial-server ros-melodic-rosserial-client \
-  ros-melodic-rosserial-msgs ros-melodic-amcl ros-melodic-map-server \
-  ros-melodic-move-base ros-melodic-urdf ros-melodic-xacro \
-  ros-melodic-compressed-image-transport ros-melodic-rqt* \
-  ros-melodic-gmapping ros-melodic-navigation ros-melodic-interactive-markers
+# Frequently used commands:
 
-$ sudo apt-get install ros-melodic-dynamixel-sdk
-
-$ sudo apt-get install ros-melodic-turtlebot3-msgs
-
-$ sudo apt-get install ros-melodic-turtlebot3
-
-$ sudo apt install ros-melodic-joy ros-melodic-teleop-twist-joy
-
-$ sudo apt install ros-melodic-turtlebot3-msgs
-
-$ sudo apt install ros-melodic-dynamixel-sdk
-
-(inside src) $ git clone -b melodic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
-
+Must run every tab:
+$ cd ~/catkin_ws/
 $ export TURTLEBOT3_MODEL=waffle_pi
-
-$ echo "export TURTLEBOT3_MODEL=waffle_pi" >> ~/.bashrc
-
-11. Cloned turtlebot_3 simulations package inside outside of workspace
-
-12. Tested with:
+$ catkin_make
+$ source devel/setup.bash
 
 $ roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
 
 $ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 
-
-TODO:
-
-Solve issue:
-
-RLException: [turtlebot3_empty_world.launch] is neither a launch file in package [turtlebot3_gazebo] nor is [turtlebot3_gazebo] a launch file name
-The traceback for the exception was written to the log file
-
-Where do i clone the turtlebot_3 packages? need help setting this up
-
-See chrome tab for vid
-
-Clearly the folder structure is incorrect so start again
-
-
-Run tests above and get teleops working
-
-13. Created action folder and launch folder within work space
-
-
+# Setting up environment
 
 sudo apt-get install ros-melodic-catkin
 
@@ -127,21 +73,24 @@ cd ~/catkin_ws/
 
 catkin_make
 
+(inside catkin_ws/src) $ git clone -b melodic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+
 source devel/setup.bash
 
-All projects go inside catkin_ws/src and contain their own src folder
+Ran following commands from https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/:
 
-catkin_create_pkg sentient_vehicle std_msgs rospy roscpp
+$ sudo apt-get install ros-melodic-joy ros-melodic-teleop-twist-joy \
+  ros-melodic-teleop-twist-keyboard ros-melodic-laser-proc \
+  ros-melodic-rgbd-launch ros-melodic-depthimage-to-laserscan \
+  ros-melodic-rosserial-arduino ros-melodic-rosserial-python \
+  ros-melodic-rosserial-server ros-melodic-rosserial-client \
+  ros-melodic-rosserial-msgs ros-melodic-amcl ros-melodic-map-server \
+  ros-melodic-move-base ros-melodic-urdf ros-melodic-xacro \
+  ros-melodic-compressed-image-transport ros-melodic-rqt* \
+  ros-melodic-gmapping ros-melodic-navigation ros-melodic-interactive-markers \
+  ros-melodic-dynamixel-sdk ros-melodic-turtlebot3 ros-melodic-turtlebot3-msgs \
+  ros-melodic-dynamixel-sdk
 
-git clone -b melodic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+$ export TURTLEBOT3_MODEL=waffle_pi
 
-catkin_make in catkin_ws
-
-export TURTLEBOT3_MODEL=waffle_pi
-
-roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
-
-Must run every time:
-$ cd ~/catkin_ws/
-$ catkin_make
-$ source devel/setup.bash
+$ catkin_create_pkg sentient_vehicle std_msgs rospy roscpp
