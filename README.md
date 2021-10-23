@@ -52,9 +52,13 @@ Tasks:
 # Frequently used commands:
 
 Must run every tab:
+
 $ cd ~/catkin_ws/
+
 $ export TURTLEBOT3_MODEL=waffle_pi
+
 $ catkin_make
+
 $ source devel/setup.bash
 
 $ roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
