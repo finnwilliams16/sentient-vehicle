@@ -102,3 +102,29 @@ $ catkin_create_pkg sentient_vehicle std_msgs rospy roscpp
 # Implementation
 
 https://git.shefcompsci.org.uk/acb18ga/team13.git
+
+
+
+Task 5 - how i created an action server:
+- Created a .action file in action folder using touch
+- Copied standard action variables into this file
+- Create python files for action server and client, being sure not to use "action" in their names
+- chmod +x them to make exe
+- Open up and paste code into them, change permissions in vscode
+- Open up the CMakeLists.txt file and under add_action_files add the name of the action file
+- Run catkin_make from catkin_ws to complie everything
+- Change to server
+- Add this line:
+	from team13.msg import task2Feedback, task2Result, task2Action
+	     [packageName].msg  [actionFileName]Feedback, [actionFileName]Result, [actionFileName]Action
+- Under init, inside SimpleActionServer, change name of topic to "/topic_name", and [name]Action
+- At bottom, change name of node 
+- Switch to client
+- In the imports, change to that of the action server
+- In init, change name of node
+- In init, change name of topic to that of the server 
+- In init, change [name]Action
+- Set goals in send_goal() (you could do this later)
+- Create launch file in launch folder
+- Copy and paste launch code into there
+- Make sure launch file points to server and client
