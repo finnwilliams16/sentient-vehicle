@@ -47,9 +47,9 @@ Tasks:
 - Run inference on model by sampling from the EEG distribution
 - Research which controls to use, and the relationship between thoughts and actions
 
-## ROS:
+# ROS:
 
-# Frequently used commands:
+## Frequently used commands:
 
 Must run every tab:
 
@@ -65,7 +65,7 @@ $ roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
 
 $ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 
-# Setting up environment
+## Setting up environment
 
 sudo apt-get install ros-melodic-catkin
 
@@ -98,3 +98,5 @@ $ sudo apt-get install ros-melodic-joy ros-melodic-teleop-twist-joy \
 $ export TURTLEBOT3_MODEL=waffle_pi
 
 $ catkin_create_pkg sentient_vehicle std_msgs rospy roscpp
+
+# Implementation
