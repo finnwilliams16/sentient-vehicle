@@ -112,6 +112,7 @@ Task 5 - how i created an action server:
 - chmod +x them to make exe
 - Open up and paste code into them, change permissions in vscode
 - Open up the CMakeLists.txt file and under add_action_files add the name of the action file
+- Inside CMakeLists.txt under catkin_package -> LIBRARIES, add the name of the action server library name that is to be imported, if it is not there already
 - Run catkin_make from catkin_ws to complie everything
 - Change to server
 - Add this line:
