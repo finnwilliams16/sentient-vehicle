@@ -144,10 +144,5 @@ Action server sends:
 - result
 
 
-Current goal is to make a simple action server client that we can copy and paste for future uses. Robot should move a few paces, spin, print out some stuff and stop.
-
-Finish writing comments
-Implement robot behaviours
-Sort out git
 Sort out wiki
 Revise master plan
